@@ -1,7 +1,10 @@
 package com.example.haeun_kim.hackpretty;
 
 import android.os.Bundle;
+import android.support.design.widget.TabLayout;
+import android.support.v4.view.ViewPager;
 import android.util.Log;
+import android.view.View;
 
 import com.android.volley.VolleyError;
 import com.example.haeun_kim.hackpretty.volley.IVolleyResult;
@@ -12,15 +15,37 @@ import java.util.Map;
 
 public class MainActivity extends BaseActivity {
 
-    //네트워크를 위한 volley
+    //네트워크를 위한 volley라이브러리
     IVolleyResult mResultCallback = null;
     VolleyConnect volley;
+
+    //뷰페이저
+    private ViewPager rankPager;
+    private RankPagerAdapter rankPagerAdapter;
+    int pagerPosition; //(0,1,2)
+
+
+    //뷰페이저 위의 탭뷰
+    TabLayout tabview;
 
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
+
+        //뷰페이저
+        rankPager = (ViewPager) findViewById(R.id.rankPager);
+
+        //뷰페이저 어댑터 연결
+        rankPagerAdapter = new RankPagerAdapter( getFragmentManager() );
+        rankPagerAdapter.setTabTitle("생리대", "생리컵", "탐폰", "기타");
+        rankPager.setAdapter(rankPagerAdapter);
+
+        //탭뷰
+        tabview = (TabLayout) findViewById(R.id.rankTabview);
+        tabview.setupWithViewPager(rankPager);
+
 
         //콜백등록
         initVolleyCallback();
@@ -65,5 +90,17 @@ public class MainActivity extends BaseActivity {
 
             }
         };
+    }
+
+
+
+    //search버튼 클릭
+    public void onClickSearch(View v){
+
+    }
+
+    //Mypage버튼 클릭
+    public void onClickMypage(View v){
+
     }
 }
