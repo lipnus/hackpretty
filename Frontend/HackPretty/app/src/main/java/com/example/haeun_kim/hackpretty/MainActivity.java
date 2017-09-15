@@ -1,13 +1,11 @@
 package com.example.haeun_kim.hackpretty;
 
-import android.content.Context;
 import android.os.Bundle;
 import android.util.Log;
 
 import com.android.volley.VolleyError;
 import com.example.haeun_kim.hackpretty.volley.IVolleyResult;
 import com.example.haeun_kim.hackpretty.volley.VolleyConnect;
-import com.tsengvn.typekit.TypekitContextWrapper;
 
 import java.util.HashMap;
 import java.util.Map;
@@ -31,12 +29,7 @@ public class MainActivity extends BaseActivity {
         connectServer();
     }
 
-    //액티비티에 적용
-    @Override
-    protected void attachBaseContext(Context newBase) {
-        super.attachBaseContext(TypekitContextWrapper.wrap(newBase));
 
-    }
 
 
 

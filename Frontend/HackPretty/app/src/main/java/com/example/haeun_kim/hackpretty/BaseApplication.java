@@ -15,12 +15,13 @@ public class BaseApplication extends Application {
 
     @Override
     public void onCreate() {
-        super.onCreate();
 
         //폰트 경로설정
         Typekit.getInstance()
                 .addNormal(Typekit.createFromAsset(this, "NanumGothic.otf"))
                 .addBold(Typekit.createFromAsset(this, "NanumGothicBold.otf"));
+
+        super.onCreate();
 
     }
 

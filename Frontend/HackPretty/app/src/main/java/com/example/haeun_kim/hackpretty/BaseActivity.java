@@ -22,7 +22,10 @@ public class BaseActivity extends AppCompatActivity {
     }
 
 
-
+    @Override
+    protected void attachBaseContext(Context newBase) {
+        super.attachBaseContext(TypekitContextWrapper.wrap(newBase));
+    }
 
 
 }
