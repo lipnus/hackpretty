@@ -2,6 +2,8 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     package="com.example.haeun_kim.hackpretty">
 
+    <uses-permission android:name="android.permission.INTERNET" /> <!-- 인터넷권한 -->
+
     <application
         android:allowBackup="true"
         android:icon="@mipmap/ic_launcher"
