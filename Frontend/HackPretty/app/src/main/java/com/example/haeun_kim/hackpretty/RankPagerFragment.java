@@ -10,6 +10,12 @@ import android.view.View;
 import android.view.ViewGroup;
 
 
+import com.github.mikephil.charting.charts.HorizontalBarChart;
+import com.github.mikephil.charting.data.BarData;
+import com.github.mikephil.charting.data.BarDataSet;
+import com.github.mikephil.charting.data.BarEntry;
+import com.github.mikephil.charting.utils.ColorTemplate;
+
 import org.eazegraph.lib.charts.BarChart;
 import org.eazegraph.lib.charts.PieChart;
 import org.eazegraph.lib.models.PieModel;
@@ -87,7 +93,6 @@ public class RankPagerFragment {
 
             PieChart mPieChart = (PieChart) rootView.findViewById(R.id.piechart);
 
-
             mPieChart.addPieSlice(new PieModel("Freetime", 75, Color.parseColor("#FE6DA8")));
             mPieChart.addPieSlice(new PieModel("Sleep", 25, Color.parseColor("#CCCCCC")));
 
@@ -116,6 +121,7 @@ public class RankPagerFragment {
             context = rootView.getContext();
             return rootView;
         }
+
 
     }
 }
