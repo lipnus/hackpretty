@@ -4,16 +4,11 @@ import android.content.Intent;
 import android.os.Bundle;
 import android.support.design.widget.TabLayout;
 import android.support.v4.view.ViewPager;
-import android.util.Log;
 import android.widget.ImageView;
 import android.widget.TextView;
 
-import com.android.volley.VolleyError;
 import com.example.haeun_kim.hackpretty.volley.IVolleyResult;
 import com.github.mikephil.charting.charts.PieChart;
-
-import java.util.HashMap;
-import java.util.Map;
 
 public class DetailActivity extends BaseActivity {
 
@@ -86,12 +81,10 @@ public class DetailActivity extends BaseActivity {
 
 
 
-        //콜백등록
-        initVolleyCallback();
-
-        //접속
-        connectServer();
+ 
     }
+
+
 
 
 
