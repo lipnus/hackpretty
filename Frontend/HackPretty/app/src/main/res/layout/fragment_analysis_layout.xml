@@ -25,14 +25,20 @@
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_marginLeft="200px"
-            android:layout_marginRight="200px"
+            android:layout_marginLeft="50dp"
+            android:layout_marginRight="50dp"
             android:orientation="horizontal">
+
+            <ImageView
+                android:layout_width="15dp"
+                android:layout_height="15dp"
+                android:layout_weight="1"
+                android:src="@drawable/drop"/>
 
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_weight="3"
+                android:layout_weight="2"
                 android:text="안전성" />
 
             <ProgressBar
@@ -42,22 +48,28 @@
                 android:layout_height="wrap_content"
                 android:progress="5"
                 android:max="10"
-                android:layout_weight="7"/>
+                android:layout_weight="6"/>
 
         </LinearLayout>
 
         <LinearLayout
-            android:layout_marginTop="5dp"
+            android:layout_marginTop="10dp"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_marginLeft="200px"
-            android:layout_marginRight="200px"
+            android:layout_marginLeft="50dp"
+            android:layout_marginRight="50dp"
             android:orientation="horizontal">
+
+            <ImageView
+                android:layout_width="15dp"
+                android:layout_height="15dp"
+                android:layout_weight="1"
+                android:src="@drawable/star"/>
 
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_weight="3"
+                android:layout_weight="2"
                 android:text="만족도" />
 
             <ProgressBar
@@ -65,24 +77,30 @@
                 style="?android:attr/progressBarStyleHorizontal"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:progress="7"
+                android:progress="6"
                 android:max="10"
-                android:layout_weight="7"/>
+                android:layout_weight="6"/>
 
         </LinearLayout>
 
         <LinearLayout
-            android:layout_marginTop="5dp"
+            android:layout_marginTop="10dp"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_marginLeft="200px"
-            android:layout_marginRight="200px"
+            android:layout_marginLeft="50dp"
+            android:layout_marginRight="50dp"
             android:orientation="horizontal">
+
+            <ImageView
+                android:layout_width="15dp"
+                android:layout_height="15dp"
+                android:layout_weight="1"
+                android:src="@drawable/question"/>
 
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_weight="3"
+                android:layout_weight="2"
                 android:text="적합도" />
 
             <ProgressBar
@@ -92,7 +110,7 @@
                 android:layout_height="wrap_content"
                 android:progress="4"
                 android:max="10"
-                android:layout_weight="7"/>
+                android:layout_weight="6"/>
 
         </LinearLayout>
 
