@@ -47,23 +47,23 @@ app.post('/', function(req, res) {
 	console.log(req.body);
 });
 
-app.post('/post-test', function(req, res) {
-	console.log('post test');
-	console.log(req.body);
+// app.post('/post-test', function(req, res) {
+// 	console.log('post test');
+// 	console.log(req.body);
 
-	// respond
-	res.writeHead(404);
-	res.end("hah");
-});
+// 	// respond
+// 	res.writeHead(404);
+// 	res.end("hah");
+// });
 
-app.post('/post-main', function(req, res) {
-	console.log('post main');
-	console.log(req.body);
+// app.post('/post-main', function(req, res) {
+// 	console.log('post main');
+// 	console.log(req.body);
 
-	// respond
-	res.writeHead(200);
-	res.end("success");
-});
+// 	// respond
+// 	res.writeHead(200);
+// 	res.end("success");
+// });
 
 // app.post('/post-all-products', function(req, res) {
 // 	console.log('post all products');
