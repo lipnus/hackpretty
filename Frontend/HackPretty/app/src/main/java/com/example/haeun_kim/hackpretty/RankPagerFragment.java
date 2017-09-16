@@ -69,8 +69,11 @@ public class RankPagerFragment {
                     case 2:
                         rootView = setFragment2(container, inflater);
                         break;
-                    default:
+                    case 3:
                         rootView = setFragment3(container, inflater);
+                        break;
+                    default:
+                        rootView = setFragment1(container, inflater);
                         break;
                 }
 
