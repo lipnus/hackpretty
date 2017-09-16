@@ -1,0 +1,100 @@
+<html>
+<head>
+    <meta charset="utf-8">
+    <title>post test page</title>
+
+    <script src="https://code.jquery.com/jquery-3.2.1.min.js"
+  integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4="
+  crossorigin="anonymous"></script>
+    <script type="text/javascript">
+        //inline scripts
+        // function post_test1() {
+        //     alert("post test1");
+
+        //     $.ajax({
+        //         type: 'POST',
+        //         url: '/post-test',
+        //         data: {
+        //             "a": "abcd",
+        //             "b": 1234
+        //         },
+        //         success: function(data, textStatus, jqXHR) {
+        //             console.log("data");
+        //             console.log(data);
+        //             console.log("textStatus");
+        //             console.log(textStatus);
+        //             console.log("jqXHR");
+        //             console.log(jqXHR);
+        //         },
+        //         error: function(jqXHR, textStatus, errorThrown) {
+        //             console.log("jqXHR");
+        //             console.log(jqXHR);
+        //             console.log("textStatus");
+        //             console.log(textStatus);
+        //             console.log("errorThrown");
+        //             console.log(errorThrown);
+        //         }
+        //     });
+        // }
+
+        // function post_main() {
+        //     $.ajax({
+        //         type: 'POST',
+        //         url: '/post-main',
+        //         data: {
+        //             'value': 'test string'
+        //         },
+        //         success: function(data, textStatus, jqXHR) {
+        //             console.log("data");
+        //             console.log(data);
+        //             console.log("textStatus");
+        //             console.log(textStatus);
+        //             console.log("jqXHR");
+        //             console.log(jqXHR);
+        //         }
+        //     });
+        // }
+
+        // function post_all_products() {
+        //     $.ajax({
+        //         type: 'POST',
+        //         url: '/post-all-products',
+        //         data: null,
+        //         success: function(data, textStatus, jqXHR) {
+        //             console.log("data");
+        //             console.log(data);
+        //             console.log("textStatus");
+        //             console.log(textStatus);
+        //             console.log("jqXHR");
+        //             console.log(jqXHR);
+        //         }
+        //     });
+        // }
+
+        function search_by_keyword() {
+            $.ajax({
+                type: 'POST',
+                url: '/search-by-keyword',
+                data: {
+                    'value': '오버나이트'
+                },
+                success: function(data, textStatus, jqXHR) {
+                    console.log("data");
+                    console.log(data);
+                    console.log("textStatus");
+                    console.log(textStatus);
+                    console.log("jqXHR");
+                    console.log(jqXHR);
+                }
+            });
+        }
+    </script>
+</head>
+<body>
+    test page<hr>
+    <!-- <button onclick="post_test1()">post test1</button><br> -->
+    <!-- <button onclick="post_main()">main request</button><br> -->
+    <!-- <button onclick="post_all_products()">post all products</button><br> -->
+    <button onclick="search_by_keyword()">search by keyword</button><br>
+</body>
+</html>
