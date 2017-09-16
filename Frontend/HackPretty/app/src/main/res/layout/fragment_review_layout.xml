@@ -9,7 +9,7 @@
 
         <LinearLayout
             android:layout_width="match_parent"
-            android:layout_height="300px"
+            android:layout_height="150dp"
             android:layout_marginTop="30px"
             android:layout_marginLeft="30px"
             android:layout_marginRight="30px"
@@ -29,15 +29,16 @@
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="리뷰 내용이 여기에 표시되면 됩니당"/>
+                    android:text="Cho\n예민한 편인데 살짝 두드러기가 났어요."/>
 
         </LinearLayout>
 
 
         <android.support.design.widget.FloatingActionButton
+            android:layout_marginTop="20dp"
             android:id="@+id/fab"
-            android:layout_width="150px"
-            android:layout_height="150px"
+            android:layout_width="55dp"
+            android:layout_height="55dp"
             android:layout_gravity="bottom|end"
             android:layout_marginBottom="100px"
             android:layout_marginRight="50px"

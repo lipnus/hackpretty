@@ -3,6 +3,10 @@
 1. start server
 `node app.js`
 2. access to server
-`http://localhost:3000`
 
 ## POST URLs (TBD)
+* /
+* /img/id
+* /search
+* /img_search
+* /add_review

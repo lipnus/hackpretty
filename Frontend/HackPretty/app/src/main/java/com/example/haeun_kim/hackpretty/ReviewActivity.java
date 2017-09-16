@@ -1,7 +1,6 @@
 package com.example.haeun_kim.hackpretty;
 
 import android.content.Intent;
-import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.util.Log;
 import android.widget.Button;
@@ -14,7 +13,7 @@ import com.example.haeun_kim.hackpretty.volley.IVolleyResult;
 import java.util.HashMap;
 import java.util.Map;
 
-public class ReviewActivity extends AppCompatActivity {
+public class ReviewActivity extends BaseActivity {
 
     IVolleyResult mResultCallback = null;
     BaseActivity.VolleyConnect volley;

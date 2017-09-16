@@ -18,7 +18,7 @@ public class RecommendActivity extends BaseActivity {
         recommendIv = (ImageView) findViewById(R.id.recommendIv);
 
         Glide.with(this)
-                .load( R.drawable.recommend )
+                .load( R.drawable.recommend2 )
                 .into( recommendIv );
         recommendIv.setScaleType(ImageView.ScaleType.FIT_XY);
     }
