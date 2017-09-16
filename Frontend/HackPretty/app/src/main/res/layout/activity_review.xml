@@ -5,8 +5,8 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
-    android:layout_marginLeft="20px"
-    android:layout_marginRight="20px"
+    android:layout_marginLeft="15dp"
+    android:layout_marginRight="15dp"
     tools:context="com.example.haeun_kim.hackpretty.ReviewActivity">
 
     <TextView
@@ -14,7 +14,7 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:text="소중한 리뷰를 남겨주세요"
-        android:textSize="15pt"
+        android:textSize="11pt"
         android:textStyle="bold"
         android:layout_marginTop="150px"
         android:gravity="center" />
@@ -28,8 +28,8 @@
         android:layout_marginLeft="20px"
         android:layout_marginRight="20px"
         android:text="화이트 오버나이트 울트라 슬림 날개형"
-        android:textSize="10pt"
-        android:textColor="@color/borderColor"
+        android:textSize="6pt"
+        android:textColor="#FF7D87"
         android:gravity="center"/>
 
     <LinearLayout
@@ -37,7 +37,7 @@
         android:layout_below="@+id/revName"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_marginLeft="20px"
+        android:layout_marginLeft="15dp"
         android:layout_marginRight="20px"
         android:orientation="horizontal"
         android:layout_marginTop="100px">
@@ -47,8 +47,8 @@
             android:layout_height="wrap_content"
             android:layout_weight="3"
             android:text="평점"
-            android:textSize="12pt"
-            android:layout_marginTop="10px"/>
+            android:textSize="9pt"
+            android:layout_marginTop="12dp"/>
 
         <RatingBar
             android:layout_width="wrap_content"
@@ -61,14 +61,15 @@
     </LinearLayout>
 
     <TextView
+        android:layout_marginTop="20dp"
         android:id="@+id/revConTitle"
         android:layout_below="@+id/revRating"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginLeft="20px"
-        android:layout_marginRight="20px"
+        android:layout_marginLeft="15dp"
+        android:layout_marginRight="15dp"
         android:text="리뷰 내용"
-        android:textSize="12pt"/>
+        android:textSize="9pt"/>
 
     <EditText
         android:id="@+id/review_content"
@@ -81,19 +82,18 @@
         android:scrollHorizontally="false"
         android:minWidth="10.0dip"
         android:maxWidth="5.0dip"
-        android:padding="20px"
-        android:layout_marginTop="20dp"
-        android:layout_marginLeft="20dp"
-        android:layout_marginRight="20dp"/>
+        android:padding="16dp"
+        android:layout_marginTop="25dp"
+        android:layout_marginLeft="15dp"
+        android:layout_marginRight="15dp"/>
 
     <Button
         android:id="@+id/btnConfirm"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_marginBottom="20px"
-        android:background="@color/borderColor"
-        android:text="확인"
-        android:textSize="11pt"
+        android:background="#FF7D87"
+        android:text="작성완료"
+        android:textSize="9pt"
         android:textColor="#FFFFFF"
         android:layout_alignParentBottom="true"/>
 

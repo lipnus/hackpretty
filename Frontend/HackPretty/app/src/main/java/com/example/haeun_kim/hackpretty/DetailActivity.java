@@ -4,11 +4,12 @@ import android.content.Intent;
 import android.os.Bundle;
 import android.support.design.widget.TabLayout;
 import android.support.v4.view.ViewPager;
-import android.util.Log;
 import android.widget.ImageView;
 import android.widget.TextView;
 
 import com.bumptech.glide.Glide;
+import com.daimajia.androidanimations.library.Techniques;
+import com.daimajia.androidanimations.library.YoYo;
 import com.example.haeun_kim.hackpretty.dto.DetailData;
 import com.example.haeun_kim.hackpretty.volley.IVolleyResult;
 import com.github.mikephil.charting.charts.PieChart;
@@ -48,18 +49,6 @@ public class DetailActivity extends BaseActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_detail);
 
-        //뷰페이저
-        rankPager = (ViewPager) findViewById(R.id.rankPager);
-
-        //뷰페이저 어댑터 연결
-        rankPagerAdapter = new RankPagerAdapter( getFragmentManager() );
-        rankPagerAdapter.setTabTitle("분석", "성분", "리뷰");
-        rankPager.setAdapter(rankPagerAdapter);
-
-        //탭뷰
-        tabview = (TabLayout) findViewById(R.id.rankTabview);
-        tabview.setupWithViewPager(rankPager);
-
         //제품이름
         productTextView = (TextView) findViewById(R.id.detail_product_title_textview);
 
@@ -80,18 +69,44 @@ public class DetailActivity extends BaseActivity {
     public void decodeJson(String jsonStr){
 
         Gson gson = new Gson();
-
         DetailData detailData= gson.fromJson(jsonStr, DetailData.class);
-        Log.d("Response", "객체: " + detailData.getName());
-
 
         productTextView.setText("" + detailData.getBrand() + " " + detailData.getName() );
 
+        //제품사진 설정
         Glide.with(this)
                 .load( "http://163.180.118.201:3000/img/" + detailData.getProd_id() )
                 .into( productImageView );
 
 
+        //제품사진 애니매이션
+        YoYo.with(Techniques.Tada)
+                .duration(700)
+                .repeat(2)
+                .playOn(productImageView);
+
+
+        BaseApplication.score1 = Integer.parseInt( detailData.getScore1() );
+        BaseApplication.score2 = Integer.parseInt( detailData.getScore2() );
+        BaseApplication.score3 = Integer.parseInt( detailData.getScore3() );
+        BaseApplication.score4 = Integer.parseInt( detailData.getScore4() );
+
+        setPager();
+
+    }
+
+    public void setPager(){
+        //뷰페이저
+        rankPager = (ViewPager) findViewById(R.id.rankPager);
+
+        //뷰페이저 어댑터 연결
+        rankPagerAdapter = new RankPagerAdapter( getFragmentManager() );
+        rankPagerAdapter.setTabTitle("분석", "성분", "리뷰");
+        rankPager.setAdapter(rankPagerAdapter);
+
+        //탭뷰
+        tabview = (TabLayout) findViewById(R.id.rankTabview);
+        tabview.setupWithViewPager(rankPager);
     }
 
 
