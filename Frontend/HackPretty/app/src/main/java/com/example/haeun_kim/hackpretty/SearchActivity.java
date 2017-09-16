@@ -4,6 +4,7 @@ import android.content.Intent;
 import android.provider.MediaStore;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.util.Log;
 import android.widget.Button;
 
 public class SearchActivity extends AppCompatActivity {
@@ -27,4 +28,12 @@ public class SearchActivity extends AppCompatActivity {
             startActivityForResult(intent, 1);
         });
     }
+
+    @Override
+    protected void onActivityResult(int requestCode, int resultCode, Intent data) {
+        if (data.getData() != null) {
+            // 찍은 사진 data 처리
+        }
+    }
+
 }
