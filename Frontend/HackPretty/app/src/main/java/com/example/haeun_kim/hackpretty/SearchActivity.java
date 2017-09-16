@@ -8,7 +8,6 @@ import android.provider.MediaStore;
 import android.support.v7.app.AlertDialog;
 import android.util.Base64;
 import android.util.Log;
-import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.ImageView;
@@ -105,14 +104,10 @@ public class SearchActivity extends BaseActivity {
                 sendPhoto(photo); //서버로 사진 전송
             }
         }
-
-//        //DetailActivity로 Intent전달
-//        Intent intent = new Intent(SearchActivity.this, DetailActivity.class);
-//        startActivity(intent);
-
     }
 
-    //서버로 사진을 전송
+
+    //이미지를 전송
     public void sendPhoto(Bitmap photo){
 
         //이미지를 string으로 변환
@@ -120,12 +115,6 @@ public class SearchActivity extends BaseActivity {
         Log.d("RESPONSE", base64Image);
         connectServer("image", base64Image, "img_search");
 
-    }
-
-
-    public void onClick_test(View v){
-        Log.d("TTSS", "테스트");
-        connectServer("keyword", "test", "search");
     }
 
 
@@ -182,7 +171,4 @@ public class SearchActivity extends BaseActivity {
             }
         };
     }
-
-
-
 }

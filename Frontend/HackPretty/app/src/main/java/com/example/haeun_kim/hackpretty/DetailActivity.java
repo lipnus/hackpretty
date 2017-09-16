@@ -94,41 +94,7 @@ public class DetailActivity extends BaseActivity {
     }
 
 
-    //서버로 post전송
-    public void connectServer(){
 
-        //서버경로
-        String url = BaseApplication.serverRootPath;
-
-        //Post전송
-        Map<String, String> params = new HashMap<>();
-        params.put("review_num", "aaa");
-        params.put("", "");
-        params.put("", "");
-
-
-        //값을 받아올 리스너, Context, url, post로 보낼 것들의 key와 value들을 담은 해쉬맵
-        volley = new VolleyConnect(mResultCallback, this, url, params);
-    }
-
-    //콜백받기
-    void initVolleyCallback(){
-        mResultCallback = new IVolleyResult() {
-            @Override
-            public void notifySuccess(String response) {
-                //전송의 결과를 받는 부분
-                Log.d("RESPONSE", response);
-
-            }
-
-            @Override
-            public void notifyError(VolleyError error) {
-                //전송 중 에러가 생겼을 때
-                //reConnectDialog();
-
-            }
-        };
-    }
 
 
 }
