@@ -34,9 +34,6 @@ dependencies {
 
 
 
-
-
-
     compile 'com.android.support:recyclerview-v7:25.0.1'
     compile 'com.tsengvn:Typekit:1.0.0'
     compile 'com.android.volley:volley:1.0.0'
@@ -45,7 +42,8 @@ dependencies {
     compile 'com.android.support:design:25.3.1'
     compile 'com.android.support:appcompat-v7:25.3.1'
     compile 'com.android.support:support-v13:25.3.1'
-
+    compile 'com.github.blackfizz:eazegraph:1.2.5l@aar'
+    compile 'com.nineoldandroids:library:2.4.0'
     compile 'com.github.PhilJay:MPAndroidChart:v3.0.2'
 
     compile 'com.android.support.constraint:constraint-layout:1.0.2'

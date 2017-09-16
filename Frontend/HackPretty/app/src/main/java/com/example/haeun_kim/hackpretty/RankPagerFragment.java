@@ -2,11 +2,25 @@ package com.example.haeun_kim.hackpretty;
 
 import android.app.Fragment;
 import android.content.Context;
+import android.graphics.Color;
 import android.os.Bundle;
 import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+
+
+import com.github.mikephil.charting.charts.HorizontalBarChart;
+import com.github.mikephil.charting.data.BarData;
+import com.github.mikephil.charting.data.BarDataSet;
+import com.github.mikephil.charting.data.BarEntry;
+import com.github.mikephil.charting.utils.ColorTemplate;
+
+import org.eazegraph.lib.charts.BarChart;
+import org.eazegraph.lib.charts.PieChart;
+import org.eazegraph.lib.models.PieModel;
+
+import java.util.ArrayList;
 
 
 //프래그먼트
@@ -69,8 +83,6 @@ public class RankPagerFragment {
         }//onCreateView
 
 
-
-
         public View setFragment1(ViewGroup container, LayoutInflater inflater){
 
             View rootView;
@@ -79,6 +91,12 @@ public class RankPagerFragment {
             rootView = inflater.inflate(R.layout.fragment_analysis_layout, container, false);
             context = rootView.getContext();
 
+            PieChart mPieChart = (PieChart) rootView.findViewById(R.id.piechart);
+
+            mPieChart.addPieSlice(new PieModel("Freetime", 75, Color.parseColor("#FE6DA8")));
+            mPieChart.addPieSlice(new PieModel("Sleep", 25, Color.parseColor("#CCCCCC")));
+
+            mPieChart.startAnimation();
 
             return rootView;
         }
@@ -103,7 +121,6 @@ public class RankPagerFragment {
             context = rootView.getContext();
             return rootView;
         }
-
 
 
     }
