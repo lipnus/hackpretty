@@ -77,51 +77,32 @@ app.post('/post-all-products', function(req, res) {
 	});
 });
 
-
+// Input: Keyword
+// Output: 해당하는 product list (ingredients count 필드 추가)
 //
+// 키워드 받아서 product name으로 검색
 app.post('/search-by-keyword', function(req, res) {
 	console.log('post search by keyword');
 	console.log(req.body);
 
 	var keyword = req.body.value;
 
-	connection.query("SELECT * FROM product WHERE name LIKE '%"+keyword+"%' AND type='생리대'", function (err, rows, fields) {
+	// using name
+	// Join 사용
+	// ---> connection query는 비동기라 쿼리 여러번 쓰는건 X
+	connection.query("SELECT product.*, COUNT(ingredient.id) as score FROM `product` LEFT OUTER JOIN `ingredient` ON ingredient.prod_id = product.prod_id WHERE name LIKE '%"+keyword+"%' GROUP BY product.prod_id;", function (err, rows, fields) {
 		if (err) {
 			console.log("Error while performing query.", err);
 		} else {
-			// console.log("rows: ", rows);
-			var output = [];
-
-			for (let row of rows) {
-				// console.log(row);
-				// console.log(typeof(row));
-				
-				var score = 0;
-				var prodid = row['prod-id'];
-
-				// score 계산 for each items
-				connection.query("SELECT COUNT(id) FROM ingredient WHERE `prod-id`="+prodid+"", function(err, rows, fields) {
-					if (err) {
-						console.log("Error while performing query.", err);
-					} else {
-						score = rows[0]['COUNT(id)'];
-						console.log("score:",score);
-						row['score'] = score;	//그냥 끼워넣기 test
-
-						output.push(row);
-					}
-				});
-
-			}
-
-			console.log("output:",output);
-
-
 			res.set('Content-Type', 'text/plain');
-			// res.send(JSON.stringify(rows));
-			res.send(JSON.stringify(output));
+			res.send(JSON.stringify(rows));
 		}
 	});
+});
+
+// Input: [ids]?
+app.post('/ingredients', function(req, res) {
+
 });
 
 app.post('/search-by-image', function(req, res) {
