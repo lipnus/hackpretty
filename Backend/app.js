@@ -85,19 +85,59 @@ app.post('/search-by-keyword', function(req, res) {
 
 	var keyword = req.body.value;
 
-	connection.query("SELECT * FROM product WHERE name LIKE '%"+keyword+"%'", function (err, rows, fields) {
+	connection.query("SELECT * FROM product WHERE name LIKE '%"+keyword+"%' AND type='생리대'", function (err, rows, fields) {
 		if (err) {
 			console.log("Error while performing query.", err);
 		} else {
 			// console.log("rows: ", rows);
+			var output = [];
 
-			// res.writeHead(200);
+			for (let row of rows) {
+				// console.log(row);
+				// console.log(typeof(row));
+				
+				var score = 0;
+				var prodid = row['prod-id'];
+
+				// score 계산 for each items
+				connection.query("SELECT COUNT(id) FROM ingredient WHERE `prod-id`="+prodid+"", function(err, rows, fields) {
+					if (err) {
+						console.log("Error while performing query.", err);
+					} else {
+						score = rows[0]['COUNT(id)'];
+						console.log("score:",score);
+						row['score'] = score;	//그냥 끼워넣기 test
+
+						output.push(row);
+					}
+				});
+
+			}
+
+			console.log("output:",output);
+
+
 			res.set('Content-Type', 'text/plain');
-			res.send(JSON.stringify(rows));
+			// res.send(JSON.stringify(rows));
+			res.send(JSON.stringify(output));
 		}
 	});
 });
 
+app.post('/search-by-image', function(req, res) {
+	//search product info by image (Base64 encoded)
+	console.log('img upload');
+	console.log(req.body);
+
+	//decoded ==> img
+	var encoded = req.body.value;
+	var decoded = new Buffer(encoded, 'base64').toString('ascii');
+
+	//google image search api is deprecated
+	// --> google vision api
+});
+
+// Listen
 port = 3000;
 app.listen(port);
 console.log('Listening at http://localhost:' + port);
