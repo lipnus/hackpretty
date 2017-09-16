@@ -89,14 +89,18 @@ public class RankPagerFragment {
 
             PieChart mPieChart = (PieChart) rootView.findViewById(R.id.piechart);
 
-            mPieChart.addPieSlice(new PieModel("Freetime", 75, Color.parseColor("#FE6DA8")));
-            mPieChart.addPieSlice(new PieModel("Sleep", 25, Color.parseColor("#CCCCCC")));
+            mPieChart.addPieSlice(new PieModel("Freetime", BaseApplication.score1, Color.parseColor("#FE6DA8")));
+            mPieChart.addPieSlice(new PieModel("Sleep", (10-BaseApplication.score1), Color.parseColor("#CCCCCC")));
 
             mPieChart.startAnimation();
 
             ProgressBar bar1 = (ProgressBar) rootView.findViewById(R.id.progressBar);
             ProgressBar bar2 = (ProgressBar) rootView.findViewById(R.id.progressBar2);
             ProgressBar bar3 = (ProgressBar) rootView.findViewById(R.id.progressBar3);
+
+            bar1.setProgress(BaseApplication.score2);
+            bar2.setProgress(BaseApplication.score3);
+            bar3.setProgress(BaseApplication.score4);
 
             bar1.getProgressDrawable().setColorFilter(
                     Color.rgb(255, 104, 104), android.graphics.PorterDuff.Mode.SRC_IN);
