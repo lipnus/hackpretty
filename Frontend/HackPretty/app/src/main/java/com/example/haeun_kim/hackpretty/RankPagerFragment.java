@@ -74,7 +74,7 @@ public class RankPagerFragment {
             View rootView;
             final Context context;
 
-            rootView = inflater.inflate(R.layout.fragment_rank_layout, container, false);
+            rootView = inflater.inflate(R.layout.fragment_ingredient_layout, container, false);
             context = rootView.getContext();
             return rootView;
         }
