@@ -3,6 +3,7 @@ package com.example.haeun_kim.hackpretty;
 import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
+import android.widget.Button;
 import android.widget.ImageView;
 
 import com.bumptech.glide.Glide;
@@ -16,12 +17,6 @@ public class IntroActivity extends BaseActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_intro);
 
-        introIv = (ImageView) findViewById(R.id.introIv);
-
-        Glide.with(this)
-                .load( R.drawable.intro )
-                .into( introIv );
-        introIv.setScaleType(ImageView.ScaleType.FIT_XY);
 
     }
 
