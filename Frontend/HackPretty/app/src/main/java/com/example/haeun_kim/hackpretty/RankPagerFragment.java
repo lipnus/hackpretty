@@ -91,7 +91,7 @@ public class RankPagerFragment {
 
             PieChart mPieChart = (PieChart) rootView.findViewById(R.id.piechart);
 
-            mPieChart.addPieSlice(new PieModel("Freetime", 75, Color.parseColor("#FE6DA8")));
+            mPieChart.addPieSlice(new PieModel("Freetime", 75, Color.parseColor("#ff93c0")));
             mPieChart.addPieSlice(new PieModel("Sleep", 25, Color.parseColor("#CCCCCC")));
 
             mPieChart.startAnimation();
