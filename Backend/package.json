@@ -4,6 +4,7 @@
   "dependencies": {
     "body-parser": "^1.18.1",
     "express": "^4.15.4",
-    "mysql": "^2.14.1"
+    "mysql": "^2.14.1",
+    "request": "^2.81.0"
   }
 }
