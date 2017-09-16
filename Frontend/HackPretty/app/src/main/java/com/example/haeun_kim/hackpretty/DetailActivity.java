@@ -67,8 +67,6 @@ public class DetailActivity extends BaseActivity {
         //제품사진
         productImageView = (ImageView) findViewById(R.id.detail_product_imageview);
 
-        //그래프
-        pieChart = (PieChart) findViewById(R.id.chart);
 
 
 
