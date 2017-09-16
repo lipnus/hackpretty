@@ -14,7 +14,6 @@ public class RankPagerAdapter extends android.support.v13.app.FragmentPagerAdapt
     private String title1;
     private String title2;
     private String title3;
-    private String title4;
 
 
 
@@ -35,7 +34,7 @@ public class RankPagerAdapter extends android.support.v13.app.FragmentPagerAdapt
     //전체 페이지수
     @Override
     public int getCount() {
-        return 4;
+        return 3;
     }
 
     @Override
@@ -55,20 +54,18 @@ public class RankPagerAdapter extends android.support.v13.app.FragmentPagerAdapt
                 return title2;
             case 2:
                 return title3;
-            case 3:
-                return title4;
+
         }
         return null;
     }
 
 
     //탭뷰의 제목설정
-    public void setTabTitle(String title1, String title2, String title3, String title4){
+    public void setTabTitle(String title1, String title2, String title3){
 
         this.title1 = title1;
         this.title2 = title2;
         this.title3 = title3;
-        this.title4 = title4;
     }
 
 }

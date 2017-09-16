@@ -31,28 +31,13 @@
             android:background="@null"
             />
 
-        <ImageView
-            android:layout_marginLeft="10dp"
-            android:layout_width="25dp"
-            android:layout_height="25dp"
-            android:background="#000000"
-            android:layout_marginRight="15dp"
-            android:onClick="onClickSearch"
-            />
 
-        <ImageView
-            android:layout_marginLeft="10dp"
-            android:layout_width="25dp"
-            android:layout_height="25dp"
-            android:background="#000000"
-            android:layout_marginRight="15dp"
-            android:onClick="onClickMypage"
-            />
     </LinearLayout>
 
 
     <!--랭킹 탭뷰-->
     <android.support.design.widget.TabLayout
+        android:layout_marginTop="300dp"
         android:id="@+id/rankTabview"
         android:layout_width="match_parent"
         android:layout_height="35dp" />
@@ -66,12 +51,7 @@
         android:layout_height="200dp"/>
 
 
-    <TextView
-        android:layout_marginLeft="20dp"
-        android:layout_marginTop="10dp"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="2017년 12월 4주차 랭킹 더 보기"/>
+
 
 
 </LinearLayout>

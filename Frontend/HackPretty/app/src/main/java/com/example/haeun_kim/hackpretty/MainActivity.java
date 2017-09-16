@@ -4,7 +4,6 @@ import android.os.Bundle;
 import android.support.design.widget.TabLayout;
 import android.support.v4.view.ViewPager;
 import android.util.Log;
-import android.view.View;
 
 import com.android.volley.VolleyError;
 import com.example.haeun_kim.hackpretty.volley.IVolleyResult;
@@ -39,7 +38,7 @@ public class MainActivity extends BaseActivity {
 
         //뷰페이저 어댑터 연결
         rankPagerAdapter = new RankPagerAdapter( getFragmentManager() );
-        rankPagerAdapter.setTabTitle("생리대", "생리컵", "탐폰", "기타");
+        rankPagerAdapter.setTabTitle("분석", "성분", "리뷰");
         rankPager.setAdapter(rankPagerAdapter);
 
         //탭뷰
@@ -94,13 +93,5 @@ public class MainActivity extends BaseActivity {
 
 
 
-    //search버튼 클릭
-    public void onClickSearch(View v){
 
-    }
-
-    //Mypage버튼 클릭
-    public void onClickMypage(View v){
-
-    }
 }
