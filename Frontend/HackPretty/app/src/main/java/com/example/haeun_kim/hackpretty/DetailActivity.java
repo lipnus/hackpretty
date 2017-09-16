@@ -4,11 +4,15 @@ import android.content.Intent;
 import android.os.Bundle;
 import android.support.design.widget.TabLayout;
 import android.support.v4.view.ViewPager;
+import android.util.Log;
 import android.widget.ImageView;
 import android.widget.TextView;
 
+import com.bumptech.glide.Glide;
+import com.example.haeun_kim.hackpretty.dto.DetailData;
 import com.example.haeun_kim.hackpretty.volley.IVolleyResult;
 import com.github.mikephil.charting.charts.PieChart;
+import com.google.gson.Gson;
 
 public class DetailActivity extends BaseActivity {
 
@@ -69,17 +73,29 @@ public class DetailActivity extends BaseActivity {
 
         //앞 액티비티로부터 인텐트를 받아온다
         Intent iT = getIntent();
-//        prodInfo = iT.getExtras().getString("prodInfo");
+        prodInfo = iT.getExtras().getString("prodInfo");
+
+        decodeJson(prodInfo);
+
+    }
 
 
+    //전송된 json String을 객체화한다
+    public void decodeJson(String jsonStr){
+
+        Gson gson = new Gson();
+
+        DetailData detailData= gson.fromJson(jsonStr, DetailData.class);
+        Log.d("Response", "객체: " + detailData.getName());
 
 
-        //테스트
-        productTextView.setText("게오니스 순면사랑");
+        productTextView.setText("" + detailData.getBrand() + " " + detailData.getName() );
+
+        Glide.with(this)
+                .load( "http://163.180.118.201:3000/img/" + detailData.getProd_id() )
+                .into( productImageView );
 
 
-
- 
     }
 
 

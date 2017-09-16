@@ -155,6 +155,7 @@ public class SearchActivity extends BaseActivity {
                 //정상적으로 데이터를 받음
                 if(!response.equals("reject")){
                     Intent intent = new Intent(SearchActivity.this, DetailActivity.class);
+                    intent.putExtra("prodInfo", response);
                     startActivity(intent);
                 }else{
 

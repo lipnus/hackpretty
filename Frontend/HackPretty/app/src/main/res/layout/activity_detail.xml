@@ -19,7 +19,6 @@
             android:layout_height="wrap_content"/>
 
         <ImageView
-            android:background="#23ffff"
             android:layout_marginTop="30dp"
             android:layout_gravity="center_horizontal"
             android:layout_width="200dp"
