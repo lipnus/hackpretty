@@ -12,7 +12,7 @@ import com.example.haeun_kim.hackpretty.volley.VolleyConnect;
 import java.util.HashMap;
 import java.util.Map;
 
-public class MainActivity extends BaseActivity {
+public class DetailActivity extends BaseActivity {
 
     //네트워크를 위한 volley라이브러리
     IVolleyResult mResultCallback = null;
