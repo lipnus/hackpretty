@@ -3,6 +3,7 @@ package com.example.haeun_kim.hackpretty;
 import android.app.Fragment;
 import android.content.Context;
 import android.content.Intent;
+import android.content.res.ColorStateList;
 import android.graphics.Color;
 import android.os.Bundle;
 import android.support.design.widget.FloatingActionButton;
@@ -10,6 +11,7 @@ import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.ProgressBar;
 import android.widget.Toast;
 
 import org.eazegraph.lib.charts.PieChart;
@@ -94,6 +96,18 @@ public class RankPagerFragment {
 
             mPieChart.startAnimation();
 
+            ProgressBar bar1 = (ProgressBar) rootView.findViewById(R.id.progressBar);
+            ProgressBar bar2 = (ProgressBar) rootView.findViewById(R.id.progressBar2);
+            ProgressBar bar3 = (ProgressBar) rootView.findViewById(R.id.progressBar3);
+
+            bar1.getProgressDrawable().setColorFilter(
+                    Color.rgb(255, 104, 104), android.graphics.PorterDuff.Mode.SRC_IN);
+
+            bar2.getProgressDrawable().setColorFilter(
+                    Color.rgb(255, 222, 104), android.graphics.PorterDuff.Mode.SRC_IN);
+
+            bar3.getProgressDrawable().setColorFilter(
+                    Color.rgb(140, 237, 135), android.graphics.PorterDuff.Mode.SRC_IN);
             return rootView;
         }
 
