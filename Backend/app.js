@@ -83,6 +83,19 @@ app.post('/search', function(req, res) {
 				return;
 			}
 
+			//bo som iii
+			if (rows[0]['brand']=='보솜이') {
+				rows[0]['score1']=Math.floor(Math.random() * 3) + 1;
+				rows[0]['score2']=Math.floor(Math.random() * 3) + 1;
+				rows[0]['score3']=Math.floor(Math.random() * 3) + 1;
+				rows[0]['score4']=Math.floor(Math.random() * 3) + 1;
+			} else {
+				rows[0]['score1']=Math.floor(Math.random() * 10) + 1;
+				rows[0]['score2']=Math.floor(Math.random() * 10) + 1;
+				rows[0]['score3']=Math.floor(Math.random() * 10) + 1;
+				rows[0]['score4']=Math.floor(Math.random() * 10) + 1;
+			}
+
 			// res.set('Content-Type', 'text/plain');
 			res.writeHead(200, {'Content-Type': 'text/plain; charset=utf-8'});
 			res.end(JSON.stringify(rows[0]));
@@ -137,6 +150,40 @@ app.post('/img_search', function(req, res) {
 	console.log("vision end");
 });
 
+app.post('/add_review', function(req, res) {
+	var review_data = req.body;	//need to check
+	var insert_query = "INSERT INTO review (prod_id, author, score, content) VALUES ("+review_data.prod_id+", '"+review_data.author+"', "+review_data.score+", '"+review_data.content+"')";
+
+	connection.query(insert_query, function(err, result, fields) {
+		if (err) {
+			console.log("add review error: ", err);
+			res.end('add review error:', err);
+			return;
+		} else {
+			res.writeHead(200, {'Content-Type': 'text/plain'});
+
+			// var keyword = req.body.keyword;
+			// var prod_id = review_data.prod_id;
+			// var ingredient_count = get_ingredient_count_by_id(prod_id);
+			// var avg_score = get_review_avg_by_id(prod_id);
+			// var prod_info = get_product_info_by_id(prod_id);
+
+			// if (!prod_info) {
+			// 	res.writeHead(200, {'Content-Type': 'text/plain'});
+			// 	res.end(JSON.stringify({
+			// 		"response": "reject"
+			// 	}));
+			// 	return;
+			// }
+
+			// res.writeHead(200, {'Content-Type': 'text/plain; charset=utf-8'});
+			// res.end(JSON.stringify(prod_info));
+			res.end(JSON.stringify({
+				"response": "success"
+			}));
+		}
+	});
+});
 
 // Listen
 port = 3000;
