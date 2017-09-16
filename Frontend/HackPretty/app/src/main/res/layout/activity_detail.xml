@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#ffffff">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+        <TextView
+            android:layout_marginTop="40dp"
+            android:layout_gravity="center_horizontal"
+            android:id="@+id/detail_product_title_textview"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"/>
+
+        <ImageView
+            android:background="#23ffff"
+            android:layout_marginTop="30dp"
+            android:layout_gravity="center_horizontal"
+            android:layout_width="200dp"
+            android:layout_height="200dp"
+            android:id="@+id/detail_product_imageview"/>
+
+        <!--탭뷰-->
+        <android.support.design.widget.TabLayout
+            android:layout_marginTop="30dp"
+            android:id="@+id/rankTabview"
+            android:layout_width="match_parent"
+            android:layout_height="35dp" />
+
+
+        <!--뷰페이저-->
+        <android.support.v4.view.ViewPager xmlns:android="http://schemas.android.com/apk/res/android"
+            android:id="@+id/rankPager"
+            android:layout_width="match_parent"
+            android:background="#FBEFEF"
+            android:layout_height="300dp"/>
+
+    </LinearLayout>
+
+
+
+
+
+
+
+</ScrollView>

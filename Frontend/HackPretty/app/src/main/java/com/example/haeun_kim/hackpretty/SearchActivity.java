@@ -1,22 +1,22 @@
 package com.example.haeun_kim.hackpretty;
 
-import android.content.ActivityNotFoundException;
 import android.content.DialogInterface;
 import android.content.Intent;
 import android.graphics.Bitmap;
+import android.os.Bundle;
 import android.provider.MediaStore;
 import android.support.v7.app.AlertDialog;
-import android.support.v7.app.AppCompatActivity;
-import android.os.Bundle;
 import android.util.Log;
 import android.widget.Button;
-import android.widget.ImageButton;
-import android.widget.Toast;
+import android.widget.RelativeLayout;
+
 
 public class SearchActivity extends BaseActivity {
 
     private static final int PICK_FROM_CAMERA = 1;
     private static final int PICK_FROM_GALLERY = 2;
+
+    RelativeLayout relativeLayout;
 
 
     @Override
@@ -26,6 +26,9 @@ public class SearchActivity extends BaseActivity {
 
         Button btnSearch = (Button) findViewById(R.id.btnSearch);
         Button btnCamera = (Button) findViewById(R.id.btnCamera);
+
+
+
 
 
         btnSearch.setOnClickListener((v) -> {
@@ -71,6 +74,8 @@ public class SearchActivity extends BaseActivity {
             }
         }
 
+
+        //DetailActivity로 Intent전달
         Intent intent = new Intent(SearchActivity.this, DetailActivity.class);
         startActivity(intent);
 
