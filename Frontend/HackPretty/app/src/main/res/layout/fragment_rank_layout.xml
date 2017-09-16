@@ -10,6 +10,7 @@
 
     <!--1위-->
     <LinearLayout
+        android:id="@+id/rank1"
         android:layout_weight="1"
         android:layout_width="0dp"
         android:layout_height="200dp"
@@ -30,6 +31,7 @@
 
     <!--2위-->
     <LinearLayout
+        android:id="@+id/rank2"
         android:layout_weight="1"
         android:layout_width="0dp"
         android:layout_height="200dp"
@@ -50,6 +52,7 @@
 
     <!--3위-->
     <LinearLayout
+        android:id="@+id/rank3"
         android:layout_weight="1"
         android:layout_width="0dp"
         android:layout_height="200dp"
