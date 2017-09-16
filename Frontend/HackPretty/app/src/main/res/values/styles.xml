@@ -9,4 +9,9 @@
         <item name="windowNoTitle">true</item>
     </style>
 
+    <style name="RatingBar" parent="Theme.AppCompat">
+        <item name="colorControlNormal">#f4e242</item>
+        <item name="colorControlActivated">#f4e242</item>
+    </style>
+
 </resources>

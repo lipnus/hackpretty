@@ -1,0 +1,100 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:layout_marginLeft="15dp"
+    android:layout_marginRight="15dp"
+    tools:context="com.example.haeun_kim.hackpretty.ReviewActivity">
+
+    <TextView
+        android:id="@+id/revTitle"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="소중한 리뷰를 남겨주세요"
+        android:textSize="11pt"
+        android:textStyle="bold"
+        android:layout_marginTop="150px"
+        android:gravity="center" />
+
+    <TextView
+        android:id="@+id/revName"
+        android:layout_below="@+id/revTitle"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="100px"
+        android:layout_marginLeft="20px"
+        android:layout_marginRight="20px"
+        android:text="화이트 오버나이트 울트라 슬림 날개형"
+        android:textSize="6pt"
+        android:textColor="#FF7D87"
+        android:gravity="center"/>
+
+    <LinearLayout
+        android:id="@+id/revRating"
+        android:layout_below="@+id/revName"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="15dp"
+        android:layout_marginRight="20px"
+        android:orientation="horizontal"
+        android:layout_marginTop="100px">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="3"
+            android:text="평점"
+            android:textSize="9pt"
+            android:layout_marginTop="12dp"/>
+
+        <RatingBar
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="7"
+            android:theme="@style/RatingBar"
+            android:numStars="3"
+            android:max="5"/>
+
+    </LinearLayout>
+
+    <TextView
+        android:layout_marginTop="20dp"
+        android:id="@+id/revConTitle"
+        android:layout_below="@+id/revRating"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="15dp"
+        android:layout_marginRight="15dp"
+        android:text="리뷰 내용"
+        android:textSize="9pt"/>
+
+    <EditText
+        android:id="@+id/review_content"
+        android:layout_below="@id/revConTitle"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/textarea"
+        android:lines="10"
+        android:inputType="textMultiLine"
+        android:scrollHorizontally="false"
+        android:minWidth="10.0dip"
+        android:maxWidth="5.0dip"
+        android:padding="16dp"
+        android:layout_marginTop="25dp"
+        android:layout_marginLeft="15dp"
+        android:layout_marginRight="15dp"/>
+
+    <Button
+        android:id="@+id/btnConfirm"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="#FF7D87"
+        android:text="작성완료"
+        android:textSize="9pt"
+        android:textColor="#FFFFFF"
+        android:layout_alignParentBottom="true"/>
+
+</RelativeLayout>
