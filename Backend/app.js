@@ -32,6 +32,15 @@ app.get('/', function(req, res) {
 	});
 });
 
+// app.get('/', function(req, res) {
+// });
+// app.use(express.static(__dirname + '/img'));
+app.get('/img/:id', function(req, res) {
+	// console.log(id);
+	var img_id = req.params.id;
+	res.sendFile(__dirname+"/img/"+img_id+".jpg");
+});
+
 // POST handle
 app.post('/', function(req, res) {
 	console.log('POST /');
@@ -56,26 +65,26 @@ app.post('/post-main', function(req, res) {
 	res.end("success");
 });
 
-app.post('/post-all-products', function(req, res) {
-	console.log('post all products');
-	console.log(req.body);
+// app.post('/post-all-products', function(req, res) {
+// 	console.log('post all products');
+// 	console.log(req.body);
 	
-	// res.writeHead(200);
-	connection.query('SELECT * from product', function (err, rows, fields) {
-		if (err) {
-			console.log("Error while performing query.", err);
-		} else {
-			// console.log("rows: ", rows);
-			// console.log("fields: ", fields);
-			// console.log("json send");
-			// res.json(rows);
+// 	// res.writeHead(200);
+// 	connection.query('SELECT * from product', function (err, rows, fields) {
+// 		if (err) {
+// 			console.log("Error while performing query.", err);
+// 		} else {
+// 			// console.log("rows: ", rows);
+// 			// console.log("fields: ", fields);
+// 			// console.log("json send");
+// 			// res.json(rows);
 
-			res.writeHead(200);	//success
-			res.set('Content-Type', 'text/plain');
-			res.send(JSON.stringify(rows));
-		}
-	});
-});
+// 			res.writeHead(200);	//success
+// 			res.set('Content-Type', 'text/plain');
+// 			res.send(JSON.stringify(rows));
+// 		}
+// 	});
+// });
 
 // Input: Keyword
 // Output: 해당하는 product list (ingredients count 필드 추가)
