@@ -12,7 +12,6 @@
     <uses-permission android:name="android.permission.READ_SMS" />
     <uses-permission android:name="android.permission.RECEIVE_SMS" />
 
-    <!-- 인터넷권한 -->
     <application
         android:allowBackup="true"
         android:icon="@mipmap/ic_launcher"
@@ -20,7 +19,7 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".SearchActivity">
+        <activity android:name=".IntroActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
@@ -41,6 +40,8 @@
             android:exported="true" />
 
         <activity android:name=".ReviewActivity"></activity>
+        <activity android:name=".SearchActivity" />
+        <activity android:name=".RecommendActivity"></activity>
     </application>
 
 </manifest>
