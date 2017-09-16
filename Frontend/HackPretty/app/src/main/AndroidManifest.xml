@@ -25,7 +25,10 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
+<<<<<<< HEAD
         <activity android:name=".ListActivity" />
+=======
+>>>>>>> fb4dcd36f421c9884a7f3f8bfe46a31fd0a23c6b
         <activity android:name=".DetailActivity"></activity>
     </application>
 
