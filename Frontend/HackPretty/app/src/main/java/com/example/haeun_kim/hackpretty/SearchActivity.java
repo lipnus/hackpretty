@@ -28,9 +28,6 @@ public class SearchActivity extends BaseActivity {
         Button btnCamera = (Button) findViewById(R.id.btnCamera);
 
 
-
-
-
         btnSearch.setOnClickListener((v) -> {
             Intent intent = new Intent(SearchActivity.this, DetailActivity.class);
             startActivity(intent);
