@@ -1,5 +1,6 @@
 package com.example.haeun_kim.hackpretty;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.support.design.widget.TabLayout;
 import android.support.v4.view.ViewPager;
@@ -31,6 +32,8 @@ public class DetailActivity extends BaseActivity {
     //제품 이미지뷰
     ImageView productImageView;
 
+    //SearchActivity로부터 받은 prodInfo
+    String prodInfo;
 
 
     //뷰페이저 위의 탭뷰
@@ -60,10 +63,16 @@ public class DetailActivity extends BaseActivity {
         //제품사진
         productImageView = (ImageView) findViewById(R.id.detail_product_imageview);
 
+        //앞 액티비티로부터 인텐트를 받아온다
+        Intent iT = getIntent();
+        prodInfo = iT.getExtras().getString("prodInfo");
+
+
 
 
         //테스트
-        productTextView.setText("제품이름");
+        productTextView.setText("게오니스 순면사랑");
+
 
 
         //콜백등록
@@ -72,10 +81,6 @@ public class DetailActivity extends BaseActivity {
         //접속
         connectServer();
     }
-
-
-
-
 
 
     //서버로 post전송
@@ -110,8 +115,6 @@ public class DetailActivity extends BaseActivity {
             }
         };
     }
-
-
 
 
 }

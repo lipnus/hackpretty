@@ -53,8 +53,11 @@ public class RankPagerFragment {
                     case 1:
                         rootView = setFragment1(container, inflater);
                         break;
+                    case 2:
+                        rootView = setFragment2(container, inflater);
+                        break;
                     default:
-                        rootView = setFragment1(container, inflater);
+                        rootView = setFragment3(container, inflater);
                         break;
                 }
 
@@ -74,7 +77,28 @@ public class RankPagerFragment {
             View rootView;
             final Context context;
 
+            rootView = inflater.inflate(R.layout.fragment_analysis_layout, container, false);
+            context = rootView.getContext();
+            return rootView;
+        }
+
+        public View setFragment2(ViewGroup container, LayoutInflater inflater){
+
+            View rootView;
+            final Context context;
+
             rootView = inflater.inflate(R.layout.fragment_ingredient_layout, container, false);
+            context = rootView.getContext();
+            return rootView;
+        }
+
+
+        public View setFragment3(ViewGroup container, LayoutInflater inflater){
+
+            View rootView;
+            final Context context;
+
+            rootView = inflater.inflate(R.layout.fragment_review_layout, container, false);
             context = rootView.getContext();
             return rootView;
         }

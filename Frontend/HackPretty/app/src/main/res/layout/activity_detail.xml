@@ -39,7 +39,7 @@
             android:id="@+id/rankPager"
             android:layout_width="match_parent"
             android:background="#FBEFEF"
-            android:layout_height="200dp"/>
+            android:layout_height="300dp"/>
 
     </LinearLayout>
 
