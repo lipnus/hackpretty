@@ -10,7 +10,6 @@ import android.widget.TextView;
 
 import com.android.volley.VolleyError;
 import com.example.haeun_kim.hackpretty.volley.IVolleyResult;
-import com.example.haeun_kim.hackpretty.volley.VolleyConnect;
 import com.github.mikephil.charting.charts.PieChart;
 
 import java.util.HashMap;
