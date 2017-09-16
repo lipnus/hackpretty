@@ -41,7 +41,8 @@
             android:layout_gravity="bottom|end"
             android:layout_marginBottom="100px"
             android:layout_marginRight="50px"
-            android:src="@android:drawable/ic_dialog_email" />
+            android:backgroundTint="@color/colorAccent"
+            android:src="@drawable/pen" />
 
 
 </LinearLayout>
