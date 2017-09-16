@@ -4,6 +4,8 @@ import android.os.Bundle;
 import android.support.design.widget.TabLayout;
 import android.support.v4.view.ViewPager;
 import android.util.Log;
+import android.widget.ImageView;
+import android.widget.TextView;
 
 import com.android.volley.VolleyError;
 import com.example.haeun_kim.hackpretty.volley.IVolleyResult;
@@ -12,7 +14,7 @@ import com.example.haeun_kim.hackpretty.volley.VolleyConnect;
 import java.util.HashMap;
 import java.util.Map;
 
-public class MainActivity extends BaseActivity {
+public class DetailActivity extends BaseActivity {
 
     //네트워크를 위한 volley라이브러리
     IVolleyResult mResultCallback = null;
@@ -23,6 +25,13 @@ public class MainActivity extends BaseActivity {
     private RankPagerAdapter rankPagerAdapter;
     int pagerPosition; //(0,1,2)
 
+    //제품 이름
+    TextView productTextView;
+
+    //제품 이미지뷰
+    ImageView productImageView;
+
+
 
     //뷰페이저 위의 탭뷰
     TabLayout tabview;
@@ -31,7 +40,7 @@ public class MainActivity extends BaseActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_main);
+        setContentView(R.layout.activity_detail);
 
         //뷰페이저
         rankPager = (ViewPager) findViewById(R.id.rankPager);
@@ -44,6 +53,17 @@ public class MainActivity extends BaseActivity {
         //탭뷰
         tabview = (TabLayout) findViewById(R.id.rankTabview);
         tabview.setupWithViewPager(rankPager);
+
+        //제품이름
+        productTextView = (TextView) findViewById(R.id.detail_product_title_textview);
+
+        //제품사진
+        productImageView = (ImageView) findViewById(R.id.detail_product_imageview);
+
+
+
+        //테스트
+        productTextView.setText("제품이름");
 
 
         //콜백등록

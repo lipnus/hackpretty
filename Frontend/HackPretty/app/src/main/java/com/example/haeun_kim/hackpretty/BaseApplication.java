@@ -11,7 +11,7 @@ import com.tsengvn.typekit.Typekit;
 public class BaseApplication extends Application {
 
     //서버접속경로
-    static final String serverRootPath = "http://kumchurk.ivyro.net/app/hacktest.php";
+    static final String serverRootPath = "http://163.180.118.201:3000/post-all-products";
 
     @Override
     public void onCreate() {
