@@ -53,7 +53,7 @@ public class MyBroadcastReceiver extends BroadcastReceiver{
 
             //해당 물질 액티비티 띄우기
             Intent intent3 = new Intent(context, DetailActivity.class);
-            intent3.putExtra("prodInfo", "{\"prod_id\":55,\"brand\":\"보솜이\",\"name\":\"천연코튼\",\"corp\":\"보솜이\",\"img_path\":null,\"score\":0}");
+            intent3.putExtra("prodInfo", "{\"prod_id\":55,\"brand\":\"보솜이\",\"name\":\"천연코튼\",\"corp\":\"보솜이\",\"img_path\":null,\"score\":0,\"score1\":2,\"score2\":3,\"score3\":1,\"score4\":1}");
             context.startActivity(intent3);
 
         }
