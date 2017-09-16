@@ -1,5 +1,6 @@
 <html>
 <head>
+    <meta charset="utf-8">
     <title>post test page</title>
 
     <script src="https://code.jquery.com/jquery-3.2.1.min.js"
@@ -40,7 +41,9 @@
             $.ajax({
                 type: 'POST',
                 url: '/post-main',
-                data: null,
+                data: {
+                    'value': 'test string'
+                },
                 success: function(data, textStatus, jqXHR) {
                     console.log("data");
                     console.log(data);
@@ -67,6 +70,24 @@
                 }
             });
         }
+
+        function search_by_keyword() {
+            $.ajax({
+                type: 'POST',
+                url: '/search-by-keyword',
+                data: {
+                    'value': '오버나이트'
+                },
+                success: function(data, textStatus, jqXHR) {
+                    console.log("data");
+                    console.log(data);
+                    console.log("textStatus");
+                    console.log(textStatus);
+                    console.log("jqXHR");
+                    console.log(jqXHR);
+                }
+            });
+        }
     </script>
 </head>
 <body>
@@ -74,5 +95,6 @@
     <button onclick="post_test1()">post test1</button><br>
     <button onclick="post_main()">main request</button><br>
     <button onclick="post_all_products()">post all products</button><br>
+    <button onclick="search_by_keyword()">search by keyword</button><br>
 </body>
 </html>
