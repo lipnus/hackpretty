@@ -5,8 +5,11 @@ var bodyParser = require('body-parser');
 var mysql = require('mysql');
 var request = require('request');
 var gcloud = require('gcloud')({
-  keyFilename: 'hackpretty-47c76d932490.json',
-  projectId: 'hackpretty-180110'
+	/**
+	 * keyfile --> google vision console에서 발급
+	 */
+	keyFilename: 'hackpretty-47c76d932490.json',
+	projectId: 'hackpretty-180110'
 });
 var connection = mysql.createConnection({
 	host: '163.180.118.201',
