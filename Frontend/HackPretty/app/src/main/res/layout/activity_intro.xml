@@ -5,13 +5,14 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
+    android:background="@drawable/introback"
     tools:context="com.example.haeun_kim.hackpretty.IntroActivity">
 
     <ImageView
         android:layout_width="150dp"
         android:layout_height="150dp"
         android:layout_centerHorizontal="true"
-        android:layout_marginTop="100dp"
+        android:layout_marginTop="150dp"
         android:src="@drawable/logo"/>
 
     <LinearLayout
