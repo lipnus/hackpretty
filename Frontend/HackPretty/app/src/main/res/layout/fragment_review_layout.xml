@@ -9,7 +9,7 @@
 
         <LinearLayout
             android:layout_width="match_parent"
-            android:layout_height="300px"
+            android:layout_height="150dp"
             android:layout_marginTop="30px"
             android:layout_marginLeft="30px"
             android:layout_marginRight="30px"
@@ -29,7 +29,7 @@
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="리뷰 내용이 여기에 표시되면 됩니당"/>
+                    android:text="예민한 편인데 살짝 두드러기가 났어요."/>
 
         </LinearLayout>
 
