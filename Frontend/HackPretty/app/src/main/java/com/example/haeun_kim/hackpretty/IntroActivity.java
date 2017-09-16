@@ -18,14 +18,14 @@ public class IntroActivity extends BaseActivity {
         setContentView(R.layout.activity_intro);
 
         Button btnGoSearch = (Button) findViewById(R.id.btnGoSearch);
-        Button btngoRec = (Button) findViewById(R.id.btnGoRecommend);
+        Button btnGoRec = (Button) findViewById(R.id.btnGoRecommend);
 
         btnGoSearch.setOnClickListener((v) -> {
             Intent intent = new Intent(this, SearchActivity.class);
             startActivity(intent);
         });
 
-        btngoRec.setOnClickListener((v) -> {
+        btnGoRec.setOnClickListener((v) -> {
             Intent intent = new Intent(this, RecommendActivity.class);
             startActivity(intent);
         });

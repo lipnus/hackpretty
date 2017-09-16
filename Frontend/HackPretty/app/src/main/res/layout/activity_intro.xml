@@ -29,7 +29,8 @@
             android:layout_width="300dp"
             android:layout_height="wrap_content"
             android:text="검색하기"
-            android:textSize="15dp"
+            android:textSize="18dp"
+            android:textStyle="bold"
             android:textColor="#FFFFFF"/>
 
         <Button
@@ -39,7 +40,8 @@
             android:layout_width="300dp"
             android:layout_height="wrap_content"
             android:text="추천받기"
-            android:textSize="15dp"
+            android:textSize="18dp"
+            android:textStyle="bold"
             android:textColor="#FFFFFF"/>
 
     </LinearLayout>
