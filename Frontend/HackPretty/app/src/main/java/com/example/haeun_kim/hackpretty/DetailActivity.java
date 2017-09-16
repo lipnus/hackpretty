@@ -9,7 +9,6 @@ import android.widget.ImageView;
 import android.widget.TextView;
 
 import com.bumptech.glide.Glide;
-import com.example.haeun_kim.hackpretty.dto.DetailData;
 import com.example.haeun_kim.hackpretty.volley.IVolleyResult;
 import com.github.mikephil.charting.charts.PieChart;
 import com.google.gson.Gson;
