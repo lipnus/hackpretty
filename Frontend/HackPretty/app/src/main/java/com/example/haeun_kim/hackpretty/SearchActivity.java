@@ -9,6 +9,9 @@ import android.widget.Button;
 
 public class SearchActivity extends AppCompatActivity {
 
+    private int TAKE_CAMERA = 1;
+    private int TAKE_GALLERY = 2;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -19,7 +22,7 @@ public class SearchActivity extends AppCompatActivity {
 
 
         btnSearch.setOnClickListener((v) -> {
-            Intent intent = new Intent(SearchActivity.this, MainActivity.class);
+            Intent intent = new Intent(SearchActivity.this, DetailActivity.class);
             startActivity(intent);
         });
 
@@ -31,9 +34,7 @@ public class SearchActivity extends AppCompatActivity {
 
     @Override
     protected void onActivityResult(int requestCode, int resultCode, Intent data) {
-        if (data.getData() != null) {
-            // 찍은 사진 data 처리
-        }
+        Log.d("CODE", requestCode + "");
     }
 
 }
