@@ -11,6 +11,13 @@ public class SearchActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_search);
+        
+        Button btnSearch = (Button) findViewById(R.id.btnSearch);
+
+        btnSearch.setOnClickListener((v) -> {
+            Intent intent = new Intent(SearchActivity.this, MainActivity.class);
+            startActivity(intent);
+        });
 
     }
 }
