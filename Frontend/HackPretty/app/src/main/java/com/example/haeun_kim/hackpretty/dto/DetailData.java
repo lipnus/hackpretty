@@ -1,9 +1,5 @@
 package com.example.haeun_kim.hackpretty.dto;
 
-/**
- * Created by Sunpil on 2017-09-16.
- */
-
 public class DetailData {
 
     private String prod_id;

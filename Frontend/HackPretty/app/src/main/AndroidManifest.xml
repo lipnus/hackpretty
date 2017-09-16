@@ -39,6 +39,7 @@
             android:enabled="true"
             android:exported="true" />
 
+        <activity android:name=".ReviewActivity"></activity>
         <activity android:name=".SearchActivity" />
         <activity android:name=".RecommendActivity"></activity>
     </application>
