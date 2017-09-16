@@ -51,7 +51,6 @@ public class BaseActivity extends AppCompatActivity {
         Context context; //이걸 호출한 곳의컨텍스트
         private String UPLOAD_URL; //접속주소
         private Map<String,String> params = new Hashtable<String, String>(); //post할 데이터들을 모아놓은 MAP
-        private int dialongOption;
 
         //생성자
         public VolleyConnect(IVolleyResult resultCallback, Context context, String url, Map<String, String> parmas){
@@ -61,22 +60,10 @@ public class BaseActivity extends AppCompatActivity {
             this.params = parmas;
 
             //다이얼로그는 보임
-            this.dialongOption = 0;
             ConnectServer();
         }
 
-        //Dialong에 대한 옵션을 지정하고 싶을 때 호출하는 생성자
-        public VolleyConnect(IVolleyResult resultCallback, Context context, String url, Map<String, String> parmas, int dialogOption){
-            mResultCallback = resultCallback;
-            this.context = context;
-            this.UPLOAD_URL = url;
-            this.params = parmas;
-            this.dialongOption = dialogOption;
 
-            ConnectServer();
-
-
-        }
 
         //volley를 이용하여 서버에 접속
         private void ConnectServer(){
