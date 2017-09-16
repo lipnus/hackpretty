@@ -1,54 +1,58 @@
 <?xml version="1.0" encoding="utf-8"?>
-<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:id="@+id/searchLayout"
     tools:context="com.example.haeun_kim.hackpretty.SearchActivity">
 
+    <ImageView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:id="@+id/search_background"/>
 
     <LinearLayout
+        android:layout_marginTop="50dp"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_centerInParent="true"
         android:orientation="horizontal"
-        android:layout_marginLeft="20px"
-        android:layout_marginRight="20px">
+        android:layout_gravity="center_vertical"
+        android:paddingLeft="20dp"
+        android:paddingRight="20dp">
 
         <EditText
             android:id="@+id/editSearch"
             android:background="@drawable/borderline"
-            android:textColor="#FFFFFF"
+            android:textColor="#dc4e5f"
+            android:textColorHint="#efb9bf"
+            android:hint="제품명을 입력해주세요"
             android:layout_width="wrap_content"
-            android:layout_height="100px"
-            android:layout_weight="8"
-            android:hint="상품명을 검색해주세요"
-            android:textColorHint="#EEEEEE"
+            android:layout_height="40dp"
             android:ems="10"
             android:inputType="text"
-            android:paddingLeft="30px"/>
+            android:paddingLeft="20dp"/>
 
         <Button
             android:id="@+id/btnSearch"
-            android:background="@drawable/fullcolorbtn"
-            android:layout_width="100px"
-            android:layout_height="wrap_content"
-            android:layout_marginLeft="15px"
-            android:layout_weight="1"
-            android:scaleType="fitCenter"
-            android:text="검색" />
+            android:background="@drawable/search"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:layout_marginLeft="10dp"
+            android:layout_gravity="center_vertical"/>
 
         <Button
             android:id="@+id/btnCamera"
-            android:background="@drawable/fullcolorbtn"
-            android:layout_width="100px"
-            android:layout_height="wrap_content"
-            android:layout_weight="1"
-            android:layout_marginLeft="15px"
-            android:src="@drawable/camera"
-            android:scaleType="fitCenter"
-            android:text="카메라" />
+            android:background="@drawable/cam"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:layout_marginLeft="10dp"
+            android:layout_gravity="center_vertical"/>
+
     </LinearLayout>
 
-</RelativeLayout>
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="테스트"
+        android:onClick="onClick_test"/>
+
+</FrameLayout>

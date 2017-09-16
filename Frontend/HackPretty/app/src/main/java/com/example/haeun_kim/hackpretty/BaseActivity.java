@@ -81,9 +81,6 @@ public class BaseActivity extends AppCompatActivity {
         //volley를 이용하여 서버에 접속
         private void ConnectServer(){
 
-
-
-
             StringRequest stringRequest = new StringRequest(Request.Method.POST, UPLOAD_URL,
                     new Response.Listener<String>() {
                         @Override
