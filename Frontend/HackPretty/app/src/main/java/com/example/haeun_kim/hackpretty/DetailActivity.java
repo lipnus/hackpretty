@@ -9,6 +9,8 @@ import android.widget.ImageView;
 import android.widget.TextView;
 
 import com.bumptech.glide.Glide;
+import com.daimajia.androidanimations.library.Techniques;
+import com.daimajia.androidanimations.library.YoYo;
 import com.example.haeun_kim.hackpretty.dto.DetailData;
 import com.example.haeun_kim.hackpretty.volley.IVolleyResult;
 import com.github.mikephil.charting.charts.PieChart;
@@ -91,10 +93,16 @@ public class DetailActivity extends BaseActivity {
 
         productTextView.setText("" + detailData.getBrand() + " " + detailData.getName() );
 
+        //제품사진 설정
         Glide.with(this)
                 .load( "http://163.180.118.201:3000/img/" + detailData.getProd_id() )
                 .into( productImageView );
 
+        //제품사진 애니매이션
+        YoYo.with(Techniques.Tada)
+                .duration(700)
+                .repeat(2)
+                .playOn(productImageView);
 
     }
 
