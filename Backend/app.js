@@ -80,6 +80,7 @@ app.post('/search', function(req, res) {
 				res.end(JSON.stringify({
 					"response": "reject"
 				}));
+				return;
 			}
 
 			// res.set('Content-Type', 'text/plain');
