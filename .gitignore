@@ -7,3 +7,6 @@
 /build
 /captures
 .externalNativeBuild
+
+# google cloud key file
+hackpretty-47c76d932490.json
