@@ -1,22 +1,50 @@
 <?xml version="1.0" encoding="utf-8"?>
-<FrameLayout
+<RelativeLayout
     xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
+    android:background="@drawable/introback"
     tools:context="com.example.haeun_kim.hackpretty.IntroActivity">
 
     <ImageView
-        android:id="@+id/introIv"
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:onClick="onClick_intro"/>
+        android:layout_width="150dp"
+        android:layout_height="150dp"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="150dp"
+        android:src="@drawable/logo"/>
 
-    <ImageView
-        android:layout_gravity="bottom"
+    <LinearLayout
         android:layout_width="match_parent"
-        android:layout_height="50dp"
-        android:onClick="onClick_recommend"/>
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:layout_alignParentBottom="true"
+        android:layout_marginBottom="20dp"
+        android:gravity="center">
 
-</FrameLayout>
+        <Button
+            android:id="@+id/btnGoSearch"
+            android:background="@drawable/fullcolorbtn"
+            android:layout_width="300dp"
+            android:layout_height="wrap_content"
+            android:text="검색하기"
+            android:textSize="18dp"
+            android:textStyle="bold"
+            android:textColor="#FFFFFF"/>
+
+        <Button
+            android:id="@+id/btnGoRecommend"
+            android:layout_marginTop="10dp"
+            android:background="@drawable/fullcolorbtn"
+            android:layout_width="300dp"
+            android:layout_height="wrap_content"
+            android:text="추천받기"
+            android:textSize="18dp"
+            android:textStyle="bold"
+            android:textColor="#FFFFFF"/>
+
+    </LinearLayout>
+
+
+</RelativeLayout>

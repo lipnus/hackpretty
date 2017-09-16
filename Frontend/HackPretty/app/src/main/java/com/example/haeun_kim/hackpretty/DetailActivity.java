@@ -112,7 +112,4 @@ public class DetailActivity extends BaseActivity {
 
 
 
-
-
-
 }
