@@ -43,7 +43,7 @@ public class MyBroadcastReceiver extends BroadcastReceiver{
                 msgs[i] = SmsMessage.createFromPdu((byte[]) pdus[i]);
             }
 
-            Toast.makeText(context, "LUNA: 위험물질구매!", Toast.LENGTH_LONG).show();
+            Toast.makeText(context, "유해물질 함유 상품입니다!", Toast.LENGTH_LONG).show();
 
             //서비스 호출(노티피케이션)
             Intent intent2 = new Intent(context, MyService.class);
@@ -52,8 +52,8 @@ public class MyBroadcastReceiver extends BroadcastReceiver{
             context.startService(intent2);
 
             //해당 물질 액티비티 띄우기
-            Intent intent3 = new Intent(context, SearchActivity.class);
-            intent3.putExtra("prodInfo", "{\"prod_id\":47,\"brand\":\"바디피트\",\"name\":\"바디피트 볼록맞춤\",\"corp\":\"엘지 유니참\",\"img_path\":\"47.jpg\",\"score\":0}");
+            Intent intent3 = new Intent(context, DetailActivity.class);
+            intent3.putExtra("prodInfo", "{\"prod_id\":55,\"brand\":\"보솜이\",\"name\":\"천연코튼\",\"corp\":\"보솜이\",\"img_path\":null,\"score\":0}");
             context.startActivity(intent3);
 
         }
