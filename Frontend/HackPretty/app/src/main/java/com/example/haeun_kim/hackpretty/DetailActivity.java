@@ -67,16 +67,12 @@ public class DetailActivity extends BaseActivity {
         productImageView = (ImageView) findViewById(R.id.detail_product_imageview);
 
 
-
-
-
-
         //앞 액티비티로부터 인텐트를 받아온다
         Intent iT = getIntent();
-        prodInfo = iT.getExtras().getString("prodInfo");
-
-        decodeJson(prodInfo);
-
+        if (iT.getExtras() != null) {
+            prodInfo = iT.getExtras().getString("prodInfo");
+            decodeJson(prodInfo);
+        }
     }
 
 
