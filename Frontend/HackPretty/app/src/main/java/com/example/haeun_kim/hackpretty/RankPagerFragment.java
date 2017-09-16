@@ -9,7 +9,6 @@ import android.view.View;
 import android.view.ViewGroup;
 
 
-
 //프래그먼트
 public class RankPagerFragment {
 
@@ -79,6 +78,8 @@ public class RankPagerFragment {
 
             rootView = inflater.inflate(R.layout.fragment_analysis_layout, container, false);
             context = rootView.getContext();
+
+
             return rootView;
         }
 

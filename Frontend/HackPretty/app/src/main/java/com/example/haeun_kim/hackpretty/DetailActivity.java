@@ -11,6 +11,7 @@ import android.widget.TextView;
 import com.android.volley.VolleyError;
 import com.example.haeun_kim.hackpretty.volley.IVolleyResult;
 import com.example.haeun_kim.hackpretty.volley.VolleyConnect;
+import com.github.mikephil.charting.charts.PieChart;
 
 import java.util.HashMap;
 import java.util.Map;
@@ -39,6 +40,10 @@ public class DetailActivity extends BaseActivity {
     //뷰페이저 위의 탭뷰
     TabLayout tabview;
 
+    PieChart pieChart;
+
+
+
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -63,9 +68,16 @@ public class DetailActivity extends BaseActivity {
         //제품사진
         productImageView = (ImageView) findViewById(R.id.detail_product_imageview);
 
+        //그래프
+        pieChart = (PieChart) findViewById(R.id.chart);
+
+
+
+
+
         //앞 액티비티로부터 인텐트를 받아온다
         Intent iT = getIntent();
-        prodInfo = iT.getExtras().getString("prodInfo");
+//        prodInfo = iT.getExtras().getString("prodInfo");
 
 
 
@@ -91,7 +103,10 @@ public class DetailActivity extends BaseActivity {
 
         //Post전송
         Map<String, String> params = new HashMap<>();
+        params.put("review_num", "aaa");
         params.put("", "");
+        params.put("", "");
+
 
         //값을 받아올 리스너, Context, url, post로 보낼 것들의 key와 value들을 담은 해쉬맵
         volley = new VolleyConnect(mResultCallback, this, url, params);

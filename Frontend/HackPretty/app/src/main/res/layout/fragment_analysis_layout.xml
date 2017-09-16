@@ -13,4 +13,9 @@
         android:layout_height="wrap_content"
         android:text="분석"/>
 
+    <com.github.mikephil.charting.charts.PieChart
+        android:id="@+id/chart"
+        android:layout_width="200dp"
+        android:layout_height="200dp" />
+
 </LinearLayout>
