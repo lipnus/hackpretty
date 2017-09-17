@@ -15,21 +15,3 @@ Lunar
 우리 이쁘게 봐조(김하은, 박고은, 이채윤, 조성현, 황선필)
 
 ### Screenshot
-
-<img src="./screenshot/icon.png" width="200" height="200">
-
-<img src="./screenshot/intro.jpeg" width="300" height="620">
-
-<img src="./screenshot/search.jpeg" width="300" height="620">
-
-<img src="./screenshot/detail.jpeg" width="300" height="620">
-
-<img src="./screenshot/detail2.jpeg" width="300" height="620">
-
-<img src="./screenshot/detail3.jpeg" width="300" height="620">
-
-<img src="./screenshot/review.jpeg" width="300" height="620">
-
-<img src="./screenshot/recom.png" width="300" height="620">
-
-<img src="./screenshot/recom2.jpeg" width="300" height="620">
