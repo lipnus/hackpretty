@@ -13,3 +13,5 @@ Lunar
 
 ### Screenshot
 ![시작화면](./screenshot/intro.jpeg)
+![추천화면](./screenshot/recom.jpeg)
+![추천화면2](./screenshot/recom2.jpeg)
