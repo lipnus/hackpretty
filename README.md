@@ -10,3 +10,6 @@ Lunar
 
 ### Author
 우리 이쁘게 봐조(김하은, 박고은, 이채윤, 조성현, 황선필)
+
+### Screenshot
+![시작화면](./screenshot/intro.jpeg)
