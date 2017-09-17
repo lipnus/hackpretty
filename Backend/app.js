@@ -16,7 +16,8 @@ var connection = mysql.createConnection({
 	user: 'hackpretty',
 	password: 'hackpretty',
 	port: 3306,
-	database: 'hackpretty'
+	database: 'hackpretty',
+	multipleStatements: true
 });
 
 // instance
@@ -162,28 +163,32 @@ app.post('/add_review', function(req, res) {
 		} else {
 			res.writeHead(200, {'Content-Type': 'text/plain'});
 
-			// var keyword = req.body.keyword;
-			// var prod_id = review_data.prod_id;
-			// var ingredient_count = get_ingredient_count_by_id(prod_id);
-			// var avg_score = get_review_avg_by_id(prod_id);
-			// var prod_info = get_product_info_by_id(prod_id);
-
-			// if (!prod_info) {
-			// 	res.writeHead(200, {'Content-Type': 'text/plain'});
-			// 	res.end(JSON.stringify({
-			// 		"response": "reject"
-			// 	}));
-			// 	return;
-			// }
-
-			// res.writeHead(200, {'Content-Type': 'text/plain; charset=utf-8'});
-			// res.end(JSON.stringify(prod_info));
 			res.end(JSON.stringify({
 				"response": "success"
 			}));
 		}
 	});
 });
+
+// app.post('/test', function(req, res) {
+// 	console.log("test");
+// 	var body = req.body;
+// 	console.log("body:",body);
+
+// 	var query_multi = "SELECT COUNT(*) as ingredient_count FROM ingredient, product WHERE product.prod_id=55 AND ingredient.prod_id=product.prod_id; ";
+
+// 	connection.query(query_multi, [1,2], function(err, results) {
+// 		if (err) {
+// 			console.log("multiple query err:",err);
+// 			res.end('query error');
+// 			return;
+// 		}
+
+// 		console.log(results);
+// 		res.writeHead(200, {'Content-Type': 'text/plain'});
+// 		res.end(JSON.stringify(results));
+// 	});
+// });
 
 // Listen
 port = 3000;

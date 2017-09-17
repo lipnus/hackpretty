@@ -10,3 +10,6 @@
 * /search
 * /img_search
 * /add_review
+
+## Requirements
+* node.js

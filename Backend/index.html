@@ -88,6 +88,19 @@
                 }
             });
         }
+
+        function test() {
+            $.ajax({
+                type: 'POST',
+                url: '/test',
+                data: {
+                    "value": "오버나이트"
+                },
+                success: function(data) {
+                    console.log(data);
+                }
+            });
+        }
     </script>
 </head>
 <body>
@@ -96,5 +109,6 @@
     <!-- <button onclick="post_main()">main request</button><br> -->
     <!-- <button onclick="post_all_products()">post all products</button><br> -->
     <button onclick="search_by_keyword()">search by keyword</button><br>
+    <button onclick="test()">test</button><br>
 </body>
 </html>
